@@ -9,4 +9,5 @@ public class CharacterUI : MonoBehaviour
     public Image Picture;
     public TextMeshProUGUI TextName;
     public Image SelectionBorder;
+    public Sprite Logo;
 }

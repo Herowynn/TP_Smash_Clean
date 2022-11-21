@@ -9,6 +9,7 @@ public class CharacterData
 {
     public string Name;
     public Sprite Picture;
+    public Sprite Logo;
     public Vector2 Offset;
     public Vector2 Size;
 }

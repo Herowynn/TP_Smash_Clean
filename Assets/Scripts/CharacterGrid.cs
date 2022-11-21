@@ -20,6 +20,7 @@ public class CharacterGrid : MonoBehaviour
             CharacterUI characterUI = characterGO.GetComponent<CharacterUI>();
             characterUI.Picture.sprite = character.Picture;
             characterUI.Picture.GetComponent<RectTransform>().pivot = character.Offset;
+            characterUI.Logo = character.Logo;
             //characterUI.Picture.GetComponent<RectTransform>().sizeDelta = character.Size;
             characterUI.TextName.text = character.Name;
 
