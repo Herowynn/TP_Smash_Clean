@@ -45,17 +45,14 @@ public class SelectionSystem : MonoBehaviour
                     if (Input.GetMouseButtonDown(0))
                     {
                         Slots[rand].GetComponent<Slot>().SetCharacterSprite(characterUI);
-                    }
-                        
-                    _selectedCharacter = characterUI;
 
-                    if (Input.GetMouseButtonDown(0))
-                    {
                         if (_selectedCharacter != null)
                         {
                             Slots[rand].transform.DOPunchPosition(Vector3.down, 0.25f, 2, 0);
                         }
                     }
+                        
+                    _selectedCharacter = characterUI;
                     break;
                 }
             }

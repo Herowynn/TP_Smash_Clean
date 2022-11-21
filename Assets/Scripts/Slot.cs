@@ -18,6 +18,7 @@ public class Slot : MonoBehaviour
     {
         Sequence sequence = DOTween.Sequence();
         sequence.Append(CharacterPicture.transform.DOLocalMoveX(-100 + _initialPositionX, 0.1f));
+
         sequence.AppendCallback(() =>
         {
             CharacterPicture.sprite = characterUI.Picture.sprite;
@@ -25,6 +26,7 @@ public class Slot : MonoBehaviour
             CharacterPicture.GetComponent<RectTransform>().pivot = characterUI.Picture.GetComponent<RectTransform>().pivot;
             CharacterPicture.GetComponent<RectTransform>().sizeDelta = characterUI.Picture.GetComponent<RectTransform>().sizeDelta;
         });
+
         sequence.Append(CharacterPicture.transform.DOLocalMoveX(100 + _initialPositionX, 0));
         sequence.Append(CharacterPicture.transform.DOLocalMoveX( + _initialPositionX, 0.2f));
         CharacterName.text = characterUI.TextName.text;
