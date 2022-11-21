@@ -17,10 +17,11 @@ public class CharacterGrid : MonoBehaviour
         foreach (var character in Characters)
         {
             GameObject characterGO = Instantiate(CharacterPrefab, transform);
-            characterGO.GetComponentsInChildren<Image>()[1].sprite = character.Picture;
-            characterGO.GetComponentsInChildren<Image>()[1].GetComponent<RectTransform>().pivot = character.Offset;
-            //characterGO.GetComponentsInChildren<Image>()[1].GetComponent<RectTransform>().sizeDelta = character.Size;
-            characterGO.GetComponentInChildren<TextMeshProUGUI>().text = character.Name;
+            CharacterUI characterUI = characterGO.GetComponent<CharacterUI>();
+            characterUI.Picture.sprite = character.Picture;
+            characterUI.Picture.GetComponent<RectTransform>().pivot = character.Offset;
+            //characterUI.Picture.GetComponent<RectTransform>().sizeDelta = character.Size;
+            characterUI.TextName.text = character.Name;
 
         }
     }
